@@ -16,7 +16,21 @@
             //Because classes support complex program as it support inhertance and avoids unnecessaray coping.
             #endregion
 
-           
+            #region Question 2
+
+            //a) Which class is the parent class?
+            //Shipment
+
+            //b) Which class is the child class?
+            //ExpressShipment
+
+            //c) What members are inherited by ExpressShipment?
+            //TrackingCode
+
+            //d) Why is inheritance better than duplicating the same code in multiple classes?
+            //Inheritance promotes code reuse, reduces duplication, makes the code easier to maintain, and allows common functionality to be defined once in the parent class and reused by multiple child classes.
+
+            #endregion
             #endregion
 
 
