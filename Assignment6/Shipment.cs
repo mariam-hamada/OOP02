@@ -77,7 +77,7 @@ namespace Assignment5
             }
         }
 
-        public double EstimatedCost
+        public virtual double EstimatedCost
         {
             get
             {
