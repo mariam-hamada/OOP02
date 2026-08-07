@@ -36,9 +36,9 @@ namespace Assignment5
         #region Constructor
         public DeliveryAddress(string city, string street, int buildingNumber)
         {
-            _city = city;
-            _street = street;
-            _buildingNumber = buildingNumber;
+            City = city;
+            Street = street;
+            BuildingNumber = buildingNumber;
         }
 
         #endregion

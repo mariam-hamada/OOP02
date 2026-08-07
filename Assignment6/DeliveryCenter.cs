@@ -9,7 +9,17 @@ namespace Assignment5
     internal class DeliveryCenter
     {
         #region Attributes
-        private Shipment[] shipments = new Shipment[10];
+        private Shipment[] shipments = new Shipment[20];
+        private string _centerName;
+
+        #endregion
+
+        #region Properties
+        public string CenterName 
+        {
+            get { return _centerName; }
+            set { _centerName = value; }
+        }
         #endregion
 
         #region indexers
@@ -54,6 +64,28 @@ namespace Assignment5
                 }
             return false;
         } 
+
+        public bool RemoveShipment(string _trackingCode)
+        {
+            for (int i = 0; i < shipments.Length; i++)
+                if (shipments[i] != null && shipments[i].TrackingCode == _trackingCode)
+                {
+                    shipments[i] = null;
+                    return true;
+                }
+            return false;
+        }
+
+        public void PrintAllShipments()
+        {
+            for (int i = 0; i < shipments.Length; i++)
+                if (shipments[i] != null)
+                {
+                    Console.WriteLine($"The details of Shipment{i + 1} is:");
+                    Console.WriteLine(shipments[i].PrintShipment);
+                    Console.WriteLine("-------------------------------------");
+                }
+        }
         #endregion
 
     }
