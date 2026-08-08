@@ -97,7 +97,7 @@ namespace Assignment5
             Destination = new DeliveryAddress("Cairo", "Tahrir", 10);
         }
 
-        public Shipment(string trackingCode, string description, double weight, double deliveryFee, DeliveryAddress destination)
+        public Shipment(string trackingCode, string description, decimal weight, decimal deliveryFee, DeliveryAddress destination)
         {
             TrackingCode = trackingCode;
             Description = description;
@@ -115,9 +115,9 @@ namespace Assignment5
                 DeliveryFee =newFee;
         }
 
-        public void PrintShipment()
+        public virtual void PrintShipment()
         {
-            Console.WriteLine($"Our Shipment details is 1. Tracking code: {_trackingCode} \n 2.Description: {_description} \n 3.Weight: {_weight} \n 4.Delivery Fee: {_deliveryFee} \n 5.Destination: {_destination}\n 6.Estimated Cost: {EstimatedCost}");
+            Console.WriteLine($"Our Shipment details is 1. Tracking code: {_trackingCode} \n 2.Description: {_description} \n 3.Weight: {_weight}kg \n 4.Delivery Fee: {_deliveryFee} EGP\n 5.Destination: {Destination.GetFullAddress()}\n 6.Estimated Cost: {EstimatedCost}EGP");
         }
         #endregion
     }

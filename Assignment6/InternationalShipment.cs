@@ -46,12 +46,19 @@ namespace Assignment6
         #endregion
 
         #region constructors
-        public InternationalShipment(string trackingCode, string description, double weight, double deliveryFee, DeliveryAddress destination, string destinationCountry, decimal customFee) : base(trackingCode, description, weight, deliveryFee, destination)
+        public InternationalShipment(string trackingCode, string description, decimal weight, decimal deliveryFee, DeliveryAddress destination, string destinationCountry, decimal customFee) : base(trackingCode, description, weight, deliveryFee, destination)
         {
             DestinationCountry = destinationCountry;
             CustomsFee = customFee;
         }
 
+        #endregion
+
+        #region Ethods 
+        public override void PrintShipment()
+        {
+            Console.WriteLine($"Our Shipment details is 1. Tracking code: {TrackingCode} \n 2.Description: {Description} \n 3.Weight: {Weight}kg \n 4.Delivery Fee: {DeliveryFee} EGP\n 5.Custom Fee: {CustomsFee} \n 6.Destiantion Country: {DestinationCountry}7.Destination: {Destination.GetFullAddress()}\n 8.Estimated Cost: {EstimatedCost}EGP");
+        }
         #endregion
 
     } 

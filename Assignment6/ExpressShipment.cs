@@ -33,9 +33,19 @@ namespace Assignment6
         #endregion
 
         #region constructors
-        public ExpressShipment(string trackingCode, string description, double weight, double deliveryFee, DeliveryAddress destination, decimal extraFee) : base(trackingCode, description, weight, deliveryFee, destination)
+        public ExpressShipment(string trackingCode, string description, decimal weight, decimal deliveryFee, DeliveryAddress destination, decimal extraFee) : base(trackingCode, description, weight, deliveryFee, destination)
         {
             ExtraFee = extraFee;
+        }
+
+
+        #endregion
+
+        #region Methods 
+         
+        public override void PrintShipment()
+        {
+            Console.WriteLine($"Our Shipment details is 1. Tracking code: {TrackingCode} \n 2.Description: {Description} \n 3.Weight: {Weight}kg \n 4.Delivery Fee: {DeliveryFee} EGP\n 5.Extra Fee: {ExtraFee} \n 6.Destination: {Destination.GetFullAddress()}\n 7.Estimated Cost: {EstimatedCost}EGP");
         }
 
         #endregion

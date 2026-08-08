@@ -11,7 +11,7 @@ namespace Assignment6
     {
         #region constructors
         public StandardShipment(string TrackingCode) : base(TrackingCode) { }
-        public StandardShipment(string trackingCode, string description, double weight, double deliveryFee, DeliveryAddress destination) : base(trackingCode, description, weight, deliveryFee, destination) { }
+        public StandardShipment(string trackingCode, string description, decimal weight, decimal deliveryFee, DeliveryAddress destination) : base(trackingCode, description, weight, deliveryFee, destination) { }
 
         #endregion
     } 

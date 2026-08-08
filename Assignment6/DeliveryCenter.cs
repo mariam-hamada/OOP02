@@ -82,7 +82,7 @@ namespace Assignment5
                 if (shipments[i] != null)
                 {
                     Console.WriteLine($"The details of Shipment{i + 1} is:");
-                    Console.WriteLine(shipments[i].PrintShipment);
+                    shipments[i].PrintShipment();
                     Console.WriteLine("-------------------------------------");
                 }
         }
